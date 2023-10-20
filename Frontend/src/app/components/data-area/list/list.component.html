@@ -1,0 +1,27 @@
+<div>
+    <select (change)="getTripsByAreaId($event)">
+        <option disabled selected>Pick Area</option>
+        <option *ngFor="let area of allAreas" [value]="area._id">{{area.areaName}}</option>
+    </select>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price For Adult</th>
+                <th>Price For kid</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trip of tripsByAreaId">
+                <td>{{trip.tripName}}</td>
+                <td>{{trip.tripDescription}}</td>
+                <td>{{trip.priceAdult}}</td>
+                <td>{{trip.priceKid}}</td>
+                <td><button (click)="deleteTrip(trip._id)">❌</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

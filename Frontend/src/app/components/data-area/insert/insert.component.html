@@ -1,0 +1,23 @@
+<div>
+    <form (submit)="send()" ngNativeValidate>
+
+        <select [(ngModel)]="trip.areaId" name="areaId">
+            <option disabled selected>Pick Area</option>
+            <option *ngFor="let area of allAreas" [value]="area._id">{{area.areaName}}</option>
+        </select>
+
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="trip.tripName" name="tripName">
+
+        <label>Description:</label> 
+        <input type="text" [(ngModel)]="trip.tripDescription" name="tripDescription">
+        
+        <label>Adult Price:</label>
+        <input type="number" [(ngModel)]="trip.priceAdult" name="priceAdult">
+
+        <label>Kid Price:</label>
+        <input type="number" [(ngModel)]="trip.priceKid" name="priceKid">
+
+        <button>Send</button>
+    </form>
+</div>

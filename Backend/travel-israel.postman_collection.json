@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "b9258a28-5a0d-4582-9e83-5ebc7db205c3",
+		"name": "travel-israel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10634848"
+	},
+	"item": [
+		{
+			"name": "get all areas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/areas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"areas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Trip",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/trips/6512e2171e150bfa040e7283",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"trips",
+						"6512e2171e150bfa040e7283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all trips by areaId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/trips/6512d2550220a9322a54b5ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"trips",
+						"6512d2550220a9322a54b5ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new trip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tripName\": \"Macthes Reamon33 \",\r\n    \"tripDescription\": \"visiting Mitzpa Ramon\",\r\n    \"areaId\":\"6512d2550220a9322a54b5ee\",\r\n    \"priceAdult\": 55,\r\n    \"priceKid\" :25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"trips"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
